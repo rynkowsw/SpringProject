@@ -1,0 +1,34 @@
+
+                <!-- Content -->
+                <section id="content" class="container">
+                    <header class="p-header">
+                         <h2 class="p-title">File Manager</h2>
+                    </header>
+                    
+                    <div class="alert alert-icon alert-info alert-dismissable fade in">
+                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                         <i class="icon-info"></i>Uploading option
+                    </div>
+                    
+                    <div id="fileManager" class="block file-manager"></div>
+                
+               </section>
+         
+          
+          <script type="text/javascript">
+              $(document).ready(function() {
+                   $('#fileManager').elfinder({
+                        resizable: false,
+                        url : 'php/connector.minimal.php',  // connector URL (REQUIRED)
+                        uiOptions : {
+                        toolbar : [
+                                ['back', 'forward', 'home', 'reload'],
+                                ['mkdir', 'mkfile', 'upload'],
+                                ['view', 'sort'],
+                                ['search']
+                        ]},
+                        height: 500
+                   });
+              });
+          </script>
+  

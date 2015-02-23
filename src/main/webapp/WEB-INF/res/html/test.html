@@ -1,0 +1,70 @@
+<section ng-controller="calendar">
+                    <section id="content" class="container">
+                    <header class="p-header">
+                         <h2 class="p-title">Calendar</h2>
+                         <div class="config">
+                              <div class="calendar-actions btn-group">
+                                   <span data-view="month" class="btn btn-gr-gray btn-sm">Month</span>
+                                   <span data-view="agendaWeek" class="btn btn-gr-gray btn-sm">Week</span>
+                                   <span data-view="agendaDay" class="btn btn-gr-gray btn-sm">Day</span>
+                              </div>
+                         </div>
+                    </header>
+                    
+                    <div class="alert alert-icon alert-info alert-dismissable fade in">
+                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                         <i class="icon-info"></i>Click on a day to add event
+                    </div>
+                    
+                    <div id="calendar"></div>
+                    
+                    <!-- Add event -->
+                    <div class="modal fade" id="addNew-event">
+                         <div class="modal-dialog">
+                              <div class="modal-content">
+                                   <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Add an Event</h4>
+                                   </div>
+                                   <div class="modal-body">
+                                        <form class="form-validation" role="form">
+                                             <div class="form-group">
+                                                  <label for="eventName">Event Name</label>
+                                                  <input type="text" class="form-control validate[required]" id="eventName" placeholder="...">
+                                             </div>
+                                             
+                                             <input type="hidden" id="getStart" />
+                                             <input type="hidden" id="getEnd" />
+                                        </form>
+                                   </div>
+                                   
+                                   <div class="modal-footer">
+                                        <input type="submit" class="btn btn-info btn-sm" id="addEvent" value="Add Event">
+                                        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">Close</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    
+                    <!-- Modal Resize alert -->
+                    <div class="modal fade" id="editEvent">
+                         <div class="modal-dialog">
+                              <div class="modal-content">
+                                   <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title">Edit Event</h4>
+                                   </div>
+                                   <div class="modal-body">
+                                        <div id="eventInfo"></div>
+                                   </div>
+                                   
+                                   <div class="modal-footer">
+                                        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">Okay</button>
+                                        <button type="button" class="btn btn-info btn-sm" id="editCancel" data-dismiss="modal">Cancel</button>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+
+                </section>

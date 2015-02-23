@@ -1,0 +1,91 @@
+<!-- Add Training -->
+			<section id="content" class="container" ng-controller="addTrainingCtrl"
+				>
+				<div class="c-block" id="minmax">
+					<h3 class="block-title">New training</h3>
+					<form role="form" class="form-validation-7"
+						>
+						<div class="col-sm-8">
+							<div class="form-group">
+								<label>Name </label> <input type="text"
+									class="input-sm validate[required] form-control"
+									placeholder="...">
+							</div>
+							<div class="form-group">
+								<label>Description</label>
+								<textarea class="input-sm validate[required] form-control"
+									placeholder="..."></textarea>
+							</div>
+
+
+							<div class="form-group">
+								<!-- Responsive Style -->
+								<div class="c-block" id="responsiveTable">
+									<h3 class="block-title">Added exercise</h3>
+									<div tabindex="5000" style="overflow: hidden;"
+										class="table-responsive">
+										<table class="table">
+											<thead>
+												<tr>
+													<th>No.</th>
+													<th>Name</th>
+													<th>Series</th>
+													<th>Repeats</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr ng-repeat="train in training">
+													<td>{{$indexTrainings + 1}}</td>
+													<td>{{train.trainingText}}</td>
+													<td>{{train.series}}</td>
+													<td>{{train.repeat}}</td>
+													<td><input type="button" ng-value="'X'"
+														ng-click="remove($train)"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="c-block">
+								<h3 class="block-title">Add exercise to plan</h3>
+								<div class="form-group">
+									<div class="col-md-3">
+										<label>Exercise</label>
+									</div>
+									<div class="col-md-3">
+										<label>Series</label>
+									</div>
+									<div class="col-md-3">
+										<label>Repeats in series</label>
+									</div>
+									<div class="clearfix"></div>
+									<div class="col-md-3">
+										<select id="form-validation-field-0"
+											data-placeholder="Select exercise..."
+											class="tag-select-limited input-sm validate[required]"
+											ng-model="trainingText">
+											<option ng-repeat="exercise in exercises">{{exercise.name}}</option>
+										</select>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class=" form-control" ng-model="series"
+											size="3">
+									</div>
+									<div class="col-md-3">
+										<input type="text" class=" form-control" ng-model="repeat"
+											size="3">
+									</div>
+									<input class="btn-primary" type="button" value="Dodaj"
+										ng-click="addTraining()">
+								</div>
+								<div style="margin-left: 35%; margin-top: 5%">
+									<input class="btn-group-vertical btn-info btn-xs" type="submit"
+										value="SEND">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>

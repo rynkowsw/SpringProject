@@ -1,0 +1,86 @@
+
+<aside id="rightbar" class="pull-right">
+	<div class="sidebar-container block">
+		<!-- Date + Clock -->
+		<div class="clock shadowed">
+			<div class="col-md-6 masonry">
+				<div class="block">
+					<h2>Todo Lists</h2>
+					<div class="config">
+						<a href="" data-original-title="Add&nbsp;New" class="ttips"
+							data-toggle="modal" data-target="#addNew-todo"> <i
+							class="icon-plus add-new-todo"></i>
+						</a> <a href="" data-toggle="tooltip" data-original-title="Refresh"
+							class="ttips"> <i class="icon-loop-2"></i>
+						</a> <a href="" data-toggle="tooltip" data-original-title="Settings"
+							class="ttips"> <i class="icon-wrench"></i>
+						</a>
+					</div>
+					<div class="listview todo-list">
+						<div class="media">
+							<label class="pull-left"> <input class="check-all"
+								type="checkbox" value="" checked>
+							</label>
+							<div class="media-body">
+								Zrobić zakupy
+								<div class="list-options">
+									<button class="btn btn-gr-gray btn-sm">Delete</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="media">
+							<label class="pull-left"> <input class="check-all"
+								type="checkbox" value="">
+							</label>
+							<div class="media-body">
+								Wykonać trening<br /> <small> Wykonać pełny plan</small><br />
+							</div>
+							<div class="list-options">
+								<button class="btn btn-gr-gray btn-sm">Delete</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Add new todo list modal -->
+				<div class="modal fade" id="addNew-todo">
+					<div class="modal-dialog modal-narrow">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-hidden="true">&times;</button>
+								<h4 class="modal-title">Add New Todo List</h4>
+							</div>
+							<form class="form-horizontal form-validation" role="form">
+								<div class="modal-body">
+									<div class="form-group">
+										<label class="col-md-2 control-label">Name</label>
+										<div class="col-md-10">
+											<input type="text"
+												class="form-control validate[required] input-sm"
+												placeholder="...">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-md-2 control-label">Detail</label>
+										<div class="col-md-10">
+											<textarea class="form-control auto-size input-sm"
+												placeholder="Optional"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-sm" data-dismiss="modal">Cancel</button>
+									<input type="submit" class="btn btn-sm" value="Add">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</aside>

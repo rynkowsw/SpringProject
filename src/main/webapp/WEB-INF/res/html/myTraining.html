@@ -1,0 +1,61 @@
+<section id="content" class="container" ng-controller="myTrainingCtrl" 
+				>
+				<div class="c-block" id="collapse">
+					<h3 class="block-title">My trainings</h3>
+					<p>Dostępne treningi</p>
+					<div class="accordion" >
+						<div class="panel-group block" id="accordion">
+
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a class="accordion-toggle collapsed" data-toggle="collapse"
+											data-parent="#accordion" href="#collapse{{$i + 1}}"> {{
+											training1}} </a>
+									</h3>
+								</div>
+								<div style="height: 0px;" id="collapse{{$i + 1}}"
+									class="panel-collapse collapse">
+									<div class="panel-body">
+										<div tabindex="5000" style="overflow: hidden;"
+											class="table-responsive">
+											<table class="table" style="width: 40%">
+												<tr>
+													<td>Name</td>
+													<td>{{ training1}}</td>
+												</tr>
+												<tr>
+													<td>Description</td>
+													<td>{{ training1}}</td>
+												</tr>
+											</table>
+
+											<table class="table">
+												<thead>
+													<tr>
+														<th>No.</th>
+														<th>Name exercise</th>
+														<th>Series</th>
+														<th>Repeats</th>
+														<th>Comment</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr ng-repeat="train in training">
+														<td>{{$indexTrainingss + 1}}</td>
+														<td>{{ train.exerciseText}}</td>
+														<td>{{ train.exerciseText}}</td>
+														<td>{{ train.exerciseText}}</td>
+														<td>{{ train.exerciseText}}</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="divider"></div>
+			</section>

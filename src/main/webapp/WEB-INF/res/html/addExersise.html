@@ -1,0 +1,46 @@
+<!-- Add exercise -->
+<section id="content" class="container"      ng-controller="addExercis"  >
+	<div class="c-block" id="minmax">
+		<h3 class="block-title">New exercise</h3>
+		<form role="form" class="form-validation-7"  >
+			<div class="col-sm-8">
+				<div class="form-group">
+					<label>Name </label> <input type="text" ng-model="addExercise.name" class="input-sm validate[required] form-control" placeholder="...">
+				</div>
+				<div class="form-group">
+					<label>Description</label><textarea ng-model="addExercise.description" class="input-sm validate[required] form-control" placeholder="..."></textarea>
+				</div>
+				<div class="c-block">
+					<h3 class="block-title">requirements</h3>
+					<div class="form-group">
+						<div class="col-md-3">
+							<label>Time</label>
+						</div>
+						<div class="col-md-3">
+							<label>Series</label>
+						</div>
+						<div class="col-md-3">
+							<label>Repeats in series</label>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-3">
+							<input type="text" class=" form-control" ng-model="addExercise.series"
+								size="3">
+						</div>
+						<div class="col-md-3">
+							<input type="text" class=" form-control" ng-model="addExercise.series"
+								size="3">
+						</div>
+						<div class="col-md-3">
+							<input type="text" class=" form-control" ng-model="addExercise.repeats"
+								size="3">
+						</div>
+						
+					<div class="col-md-3" style="margin-left: 35%; margin-top: 5%">
+						<input class="btn-group-vertical btn-info btn-xs" type="submit" ng-click="saveExercise" value="SEND">
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
